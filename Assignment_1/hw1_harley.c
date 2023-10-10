@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 
-uint32_t test_nums[4] = {0, 2, 69, 4777};
+uint32_t test_nums[6] = {0, 2, 69, 4777, 36, 65536};
 
 uint16_t count_leading_zeros(uint32_t x)
 {
@@ -37,7 +37,7 @@ uint16_t count_leading_zeros(uint32_t x)
 
 int main()
 {
-    for(int i = 0;i < 4;i++){
+    for(int i = 0;i < 6;i++){
         printf("The clz number of %u", test_nums[i]);
         printf(" is %u \n", count_leading_zeros(test_nums[i]));
     }
