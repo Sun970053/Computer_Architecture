@@ -26,12 +26,12 @@ uint16_t count_leading_zeros(uint32_t x)
     x = x | (x >> 8);
     x = x | (x >> 16);
 
-//    x = (x << 3) - x;   /* Multiply by 7. */
-//    x = (x << 8) - x;   /* Multiply by 255. */
-//    x = (x << 8) - x;   /* Again. */
-//    x = (x << 8) - x;   /* Again. */
+   x = (x << 3) - x;   /* Multiply by 7. */
+   x = (x << 8) - x;   /* Multiply by 255. */
+   x = (x << 8) - x;   /* Again. */
+   x = (x << 8) - x;   /* Again. */
 
-    return 31 - Table[(x * 0x6EB14F9) >> 26];
+    return 31 - Table[x >> 26];
 }
 
 
